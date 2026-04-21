@@ -2,13 +2,16 @@
 using Snake.Controller;
 
 Random random = new Random();
-Coord gridDimensions = new Coord(50, 20);
+// cord(width, hight)
+Coord gridDimensions = new Coord(40, 25);
 
+//start position snake
 Coord snakePos = new Coord(10, 1);
 Direction moveMentDirection = Direction.Down;
 List<Coord> snakePosHistory = new List<Coord>();
 int tailLength = 1;
 
+//randomStart apple(a)
 Coord applePos = new Coord(random.Next(1, gridDimensions.X - 1), random.Next(1, gridDimensions.Y - 1));
 int frameDelayMilli = 100;
 int score = 0;
